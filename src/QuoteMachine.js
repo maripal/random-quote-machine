@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuoteMachine.css';
 import QuoteContent from './QuoteContent';
 import QuoteButtons from './QuoteButtons';
 

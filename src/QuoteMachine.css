@@ -1,0 +1,9 @@
+#quote-box {
+  margin: auto;
+  width: 650px;
+  height: 300px;
+  background-color: lightsalmon;
+  padding: 15px;
+  margin-top: 25vh;
+  font-family: sans-serif;
+}
