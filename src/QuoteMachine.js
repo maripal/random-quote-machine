@@ -10,7 +10,7 @@ class QuoteMachine extends React.Component {
     this.state = { quote: '', author: '' };
   };
 
-  //method to show random quote when page first loads.
+  //method to return a random quote
    getRandomQuote = () => {
     let firstQuote = QuoteData[Math.floor(Math.random() * QuoteData.length)];
     //console.log(firstQuote);
@@ -34,7 +34,7 @@ class QuoteMachine extends React.Component {
     return (
       <div id="quote-box">
         <QuoteContent quoteText={this.state.quote} quoteAuthor={this.state.author} />
-        <QuoteButtons onClick={this.changeQuote} />
+        <QuoteButtons onClick={this.changeQuote} text={this.state.quote} author={this.state.author} />
       </div>
     )
   }
