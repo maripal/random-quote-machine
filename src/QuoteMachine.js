@@ -11,28 +11,30 @@ class QuoteMachine extends React.Component {
   };
 
   //method to show random quote when page first loads.
-  showFirstQuote = () => {
+   getRandomQuote = () => {
     let firstQuote = QuoteData[Math.floor(Math.random() * QuoteData.length)];
     //console.log(firstQuote);
     this.setState({ quote: firstQuote.quote, author: firstQuote.author })
    } 
 
+   //added getRandomQuote call here, to get a random quote on first page load. When I added this below in the render method,
+   //it kept coming back w/ 'maximum update depth exceeded' error. It created an infinite loop, so I was calling it at the wrong time.
+   //correct way is to call the function inside the componentDidMount function.
    componentDidMount = () => {
-     this.showFirstQuote()
+     this.getRandomQuote()
    } 
 
   //method for new quote button & pass it as prop to quotebuttons.
-  changeQuote = event => {
-
+  changeQuote = () => {
+    this.getRandomQuote();
   }
 
   render() {
-    console.log(QuoteData);
     console.log(this.state);
     return (
       <div id="quote-box">
         <QuoteContent quoteText={this.state.quote} quoteAuthor={this.state.author} />
-        <QuoteButtons />
+        <QuoteButtons onClick={this.changeQuote} />
       </div>
     )
   }
