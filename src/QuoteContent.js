@@ -3,8 +3,8 @@ import React from 'react';
 const QuoteContent = props => {
   return (
     <div>
-      <p id="text">Quote goes here...</p>
-      <h5 id="author">Author goes here</h5>
+      <p id="text">{props.quoteText}</p>
+      <h5 id="author">{props.quoteAuthor}</h5>
     </div>
   );
 };
