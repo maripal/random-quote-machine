@@ -1,10 +1,11 @@
 import React from 'react';
+import './QuoteContent.css';
 
 const QuoteContent = props => {
   return (
-    <div>
+    <div className="quote-content">
       <p id="text">{props.quoteText}</p>
-      <h5 id="author">{props.quoteAuthor}</h5>
+      <h5 id="author">- {props.quoteAuthor}</h5>
     </div>
   );
 };

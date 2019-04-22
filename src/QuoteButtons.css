@@ -1,0 +1,15 @@
+button, #tweet-quote {
+  width: 125px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid lightsalmon;
+  cursor: pointer;
+}
+
+#tweet-quote {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
